@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/characterDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="@string/planet_details"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/main_dark"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/name"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewClimate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewRotation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/rotation_period"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewClimate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewOrbital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/orbital_period"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewClimate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFullNameValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewFullName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewFullName"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFullName"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewRotationValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewRotation"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewRotation"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRotation" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewOrbitalValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewOrbital"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewOrbital"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrbital" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#7c7c7c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFullNameValue" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#7c7c7c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewClimateValue" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTerrain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/terrain"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewDiameter"
+                app:layout_constraintTop_toTopOf="@+id/textViewDiameter" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewSurfaceWater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/surface_water"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewClimate"
+                app:layout_constraintTop_toTopOf="@+id/textViewClimate" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewPopulation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/population"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewGravity"
+                app:layout_constraintTop_toTopOf="@+id/textViewGravity" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTerrainValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTerrain"
+                app:layout_constraintStart_toStartOf="@+id/textViewTerrain"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTerrain"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewSurfaceWaterValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewSurfaceWater"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewSurfaceWater"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSurfaceWater" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewPopulationValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewPopulation"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewPopulation"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPopulation"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewDiameter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/diameter"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewTerrain"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewFullName"
+                app:layout_constraintTop_toTopOf="@+id/textViewFullName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewClimate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/climate"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewTerrain"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewRotation"
+                app:layout_constraintTop_toTopOf="@+id/textViewRotation" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewGravity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/gravity"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewTerrain"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewOrbital"
+                app:layout_constraintTop_toTopOf="@+id/textViewOrbital" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewDiameterValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewDiameter"
+                app:layout_constraintStart_toStartOf="@+id/textViewDiameter"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDiameter"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewClimateValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/textViewSurfaceWater"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewClimate"
+                app:layout_constraintTop_toBottomOf="@+id/textViewClimate"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewGravityValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewGravity"
+                app:layout_constraintEnd_toStartOf="@+id/textViewSurfaceWater"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewGravity"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGravity"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

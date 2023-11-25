@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/star_wars_navigation"
+    app:startDestination="@id/navigation_character">
+
+    <fragment
+        android:id="@+id/navigation_character"
+        android:name="com.example.starwarscharacterexplorer.characters.view.CharacterFragment"
+        android:label="Character"
+        tools:layout="@layout/fragment_character">
+        <action
+            android:id="@+id/action_navigation_character_to_characterDetailsFragment"
+            app:destination="@id/characterDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_starship"
+        android:name="com.example.starwarscharacterexplorer.starship.view.StarshipFragment"
+        android:label="Starship"
+        tools:layout="@layout/fragment_starship">
+        <action
+            android:id="@+id/action_navigation_starship_to_starshipDetailsFragment"
+            app:destination="@id/starshipDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_planet"
+        android:name="com.example.starwarscharacterexplorer.planet.view.PlanetFragment"
+        android:label="Planet"
+        tools:layout="@layout/fragment_planet">
+        <action
+            android:id="@+id/action_navigation_planet_to_planetDetailsFragment"
+            app:destination="@id/planetDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="com.example.starwarscharacterexplorer.characterDetailsFragment.view.CharacterDetailsFragment"
+        android:label="@string/character_details">
+
+        <argument
+            android:name="data"
+            app:argType="com.example.starwarscharacterexplorer.characters.model.Character" />
+    </fragment>
+    <fragment
+        android:id="@+id/starshipDetailsFragment"
+        android:name="com.example.starwarscharacterexplorer.starshipDetailsFragment.view.StarshipDetailsFragment"
+        android:label="Starship Details">
+        <argument
+            android:name="data"
+            app:argType="com.example.starwarscharacterexplorer.starship.model.Starship" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/planetDetailsFragment"
+        android:name="com.example.starwarscharacterexplorer.planetDetailsFragment.view.PlanetDetailsFragment"
+        android:label="Planet Details">
+        <argument
+            android:name="data"
+            app:argType="com.example.starwarscharacterexplorer.planet.model.Planet" />
+
+    </fragment>
+</navigation>

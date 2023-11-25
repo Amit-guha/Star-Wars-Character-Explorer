@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/characterDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="@string/starship_details"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/main_dark"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/name"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewCargoCapacity"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/model"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewCargoCapacity"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewConsumables"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/consumables"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewCargoCapacity"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFullNameValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewFullName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewFullName"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFullName"
+                 />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewModelValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewModel"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewModel"
+                app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewConsumablesValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewConsumables"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewConsumables"
+                app:layout_constraintTop_toBottomOf="@+id/textViewConsumables" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#7c7c7c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFullNameValue" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#7c7c7c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCargoCapacityValue" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewLength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/length"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewStarshipClass"
+                app:layout_constraintTop_toTopOf="@+id/textViewStarshipClass" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewPassengers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/passengers"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewCargoCapacity"
+                app:layout_constraintTop_toTopOf="@+id/textViewCargoCapacity" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCrew"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/crew"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewManufacturer"
+                app:layout_constraintTop_toTopOf="@+id/textViewManufacturer" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewLengthValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewLength"
+                app:layout_constraintStart_toStartOf="@+id/textViewLength"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLength"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewPassengersValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewPassengers"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewPassengers"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPassengers" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCrewValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewCrew"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewCrew"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCrew"
+                 />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewStarshipClass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/starship_class"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewLength"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewFullName"
+                app:layout_constraintTop_toTopOf="@+id/textViewFullName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCargoCapacity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/cargo_capacity"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewLength"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewModel"
+                app:layout_constraintTop_toTopOf="@+id/textViewModel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewManufacturer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/manufacturer"
+                android:textColor="@color/light_gray"
+                app:layout_constraintEnd_toStartOf="@+id/textViewLength"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewConsumables"
+                app:layout_constraintTop_toTopOf="@+id/textViewConsumables" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewStarshipClassValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewStarshipClass"
+                app:layout_constraintStart_toStartOf="@+id/textViewStarshipClass"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStarshipClass"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCargoCapacityValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/textViewPassengers"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewCargoCapacity"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCargoCapacity"
+                 />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewManufacturerValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textViewManufacturer"
+                app:layout_constraintEnd_toStartOf="@+id/textViewPassengers"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewManufacturer"
+                app:layout_constraintTop_toBottomOf="@+id/textViewManufacturer"
+               />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
